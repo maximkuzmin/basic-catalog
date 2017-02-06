@@ -1,0 +1,18 @@
+<a ui-sref='search'>
+  к поиску
+</span>
+<div class="col-md-3">
+  <h2>
+    {{ good.name }}
+  </h2>
+  <p>
+    {{ good.description }}
+  </p>
+  <p>
+    <a class="btn" ui-sref="search.show_company({companyId: good.company.id})">
+      <strong>
+        {{ good.company.name }}
+      </strong>
+    </a>
+  </p>
+</div>

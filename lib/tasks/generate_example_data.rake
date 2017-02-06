@@ -1,10 +1,10 @@
 desc 'Заполняет бд тестовыми компаниями и товарами'
 task generate_examples: :environment  do
-  puts 'Генерируем 50 компаний с 50 товарами в каждой'
-  pb = ProgressBar.create title: 'Компании', total: 50
-  50.times do
+  puts 'Генерируем 20 компаний с 20 товарами в каждой'
+  pb = ProgressBar.create title: 'Компании', total: 20
+  20.times do
     company = Company.create name: Ryba::Company.name(solidity: 5),
-                          active: rand_boolean
+                             active: rand_boolean
     populate_with_goods company
     pb.increment
   end

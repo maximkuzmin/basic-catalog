@@ -1,0 +1,18 @@
+<a ui-sref='search'>
+  к поиску
+</a>
+
+<h1>
+  Товары компании {{ company.name }}
+</h1>
+
+<div class="col-md-3 " ng-repeat='good in company.active_goods'>
+  <h2>
+    <a ui-sref="search.show_good({goodId: good.id})">
+      {{ good.name }}
+    </a>
+  </h2>
+  <p>
+    {{ good.description }}
+  </p>
+</div>

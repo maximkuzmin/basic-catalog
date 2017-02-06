@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'bootstrap-sass'
 gem 'coffee-rails', '~> 4.2'
 gem 'configliere'
 gem 'jbuilder', '~> 2.5'
@@ -17,6 +17,11 @@ gem 'ruby-progressbar'
 gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-angular'
+  gem 'rails-assets-angular-ui-router', '~> 0.3.1'
+end
 
 group :development, :test do
   gem 'byebug', platform: :mri
